@@ -1,0 +1,623 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Teste de Perfis Financeiros para Casais&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 700px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 60px rgba(0,0,0,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #b76e79 0%, #8c535d 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-fill {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, #667eea, #764ba2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(5px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-number {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 12px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 20px 15px 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option label:before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option input[type="radio"]:checked + label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.02);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option input[type="radio"]:checked + label:after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option label:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fafbff;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #b76e79 0%, #8c535d 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 18px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(183, 110, 121, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 6px 20px rgba(183, 110, 121, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none !important;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.profile-icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.profile-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #b76e79;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.profile-description {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff5f7;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-details {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 25px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 10px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-details h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.4em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-value {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 5px 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.average-score {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.share-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-style: italic;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #888;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 2px dashed #ddd;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.restart-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.restart-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.header p {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.content {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 20px 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;💑 Teste de Perfil Financeiro&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Descubra seu perfil e compare com seu parceiro(a)!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="progress-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="progress-fill" id="progressBar"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="quizSection"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;1&lt;/span&gt; Quando sobra dinheiro no final do mês, você...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q1" value="A" id="q1a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q1a"&gt;Guarda tudo na reserva de emergência&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q1" value="B" id="q1b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q1b"&gt;Gasta rapidinho em algo que te faz feliz&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q1" value="C" id="q1c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q1c"&gt;Investe em algo que pode render mais&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q1" value="D" id="q1d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q1d"&gt;Nem olha a conta, evita pensar nisso&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;2&lt;/span&gt; Ao ver uma promoção imperdível, você...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q2" value="A" id="q2a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q2a"&gt;Pensa duas vezes: "Preciso mesmo?"&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q2" value="B" id="q2b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q2b"&gt;Compra na hora, porque é oportunidade!&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q2" value="C" id="q2c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q2c"&gt;Avalia se é um bom investimento a longo prazo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q2" value="D" id="q2d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q2d"&gt;Ignora, porque compras me estressam&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;3&lt;/span&gt; Sua maior preocupação financeira é...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q3" value="A" id="q3a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q3a"&gt;Gastar mais do que ganha e ficar no vermelho&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q3" value="B" id="q3b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q3b"&gt;Não curtir o presente por ser muito cauteloso&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q3" value="C" id="q3c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q3c"&gt;Não multiplicar o dinheiro o suficiente&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q3" value="D" id="q3d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q3d"&gt;Não saber por onde começar, me paralisa&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;4&lt;/span&gt; Em uma viagem, você prefere...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q4" value="A" id="q4a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q4a"&gt;Planejar tudo com orçamento apertado&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q4" value="B" id="q4b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q4b"&gt;Gastar sem limites para aproveitar ao máximo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q4" value="C" id="q4c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q4c"&gt;Investir em experiências que valham a pena&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q4" value="D" id="q4d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q4d"&gt;Evitar planejar finanças, deixa pra depois&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;5&lt;/span&gt; Sobre investimentos, você...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q5" value="A" id="q5a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q5a"&gt;Prefere opções seguras, mesmo que rendam pouco&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q5" value="B" id="q5b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q5b"&gt;Não pensa nisso, prefere gastar no agora&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q5" value="C" id="q5c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q5c"&gt;Ama estudar e arriscar para ganhar mais&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q5" value="D" id="q5d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q5d"&gt;Tem medo de perder tudo, evita o assunto&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;6&lt;/span&gt; Quando chega a fatura do cartão, você...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q6" value="A" id="q6a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q6a"&gt;Verifica cada centavo para não ter surpresas&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q6" value="B" id="q6b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q6b"&gt;Paga e pronto, sem stressar com detalhes&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q6" value="C" id="q6c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q6c"&gt;Analisa para ver onde pode otimizar ganhos&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q6" value="D" id="q6d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q6d"&gt;Fecha os olhos e tenta não olhar&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;7&lt;/span&gt; Seu sonho financeiro ideal é...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q7" value="A" id="q7a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q7a"&gt;Ter uma reserva gigante para qualquer crise&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q7" value="B" id="q7b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q7b"&gt;Viajar o mundo sem se preocupar com custo&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q7" value="C" id="q7c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q7c"&gt;Construir patrimônio que multiplique sozinho&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q7" value="D" id="q7d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q7d"&gt;Não ter que lidar com isso sozinho(a)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="question-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;&lt;span class="question-number"&gt;8&lt;/span&gt; Em discussões sobre dinheiro com o parceiro, você...&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q8" value="A" id="q8a"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q8a"&gt;Quer planejar tudo com antecedência&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q8" value="B" id="q8b"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q8b"&gt;Defende o direito de gastar no que te faz feliz&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q8" value="C" id="q8c"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q8c"&gt;Propõe ideias ousadas para crescerem juntos&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="option"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="radio" name="q8" value="D" id="q8d"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="q8d"&gt;Prefere evitar o assunto para não brigar&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="submit-btn" onclick="calcularResultado()"&gt;Ver Meu Perfil! 🎯&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="resultado" class="result hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="profile-icon" id="profileIcon"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="profile-name" id="perfilNome"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="profile-description" id="perfilDescricao"&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="score-details"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;📊 Sua Pontuação Detalhada&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="score-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-label"&gt;🏦 Poupa-Tudo (A)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-value" id="scoreA"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="score-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-label"&gt;🛍️ Gasta-Tudo (B)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-value" id="scoreB"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="score-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-label"&gt;📈 Investidor (C)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-value" id="scoreC"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="score-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-label"&gt;😰 Ansioso/Evitador (D)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="score-value" id="scoreD"&gt;0&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="average-score"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;📌 Pontuação Total: &lt;strong&gt;&lt;span id="totalScore"&gt;0&lt;/span&gt; pontos&lt;/strong&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div style="margin-top: 10px;"&gt;📈 Média: &lt;strong&gt;&lt;span id="averageScore"&gt;0&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="share-text"&gt;💕 Compartilhe com seu parceiro(a) e vejam como se complementam!&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="restart-btn" onclick="location.reload()"&gt;Refazer Teste&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Atualiza barra de progresso</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[type="radio"]').forEach(radio =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>radio.addEventListener('change', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let answered = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>for (let i = 1; i &lt;= 8; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (document.querySelector(`input[name="q${i}"]:checked`)) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>answered++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const percentage = (answered / 8) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('progressBar').style.width = percentage + '%';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calcularResultado() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Valores de pontuação: A=1, B=2, C=3, D=4</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const pointValues = {A: 1, B: 2, C: 3, D: 4};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let totalScore = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let countScores = {A: 0, B: 0, C: 0, D: 0};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let allAnswered = true;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Coleta as respostas</p>
+<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 1; i &lt;= 8; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const selected = document.querySelector(`input[name="q${i}"]:checked`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (selected) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const value = selected.value;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>totalScore += pointValues[value];</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>countScores[value]++;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>allAnswered = false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Verifica se todas foram respondidas</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!allAnswered) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert("⚠️ Por favor, responda todas as 8 perguntas antes de ver o resultado!");</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Calcula média</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const averageScore = totalScore / 8;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Define o perfil baseado no maior número de respostas</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let maxCount = Math.max(countScores.A, countScores.B, countScores.C, countScores.D);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let profile = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let icon = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let description = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Determina qual perfil teve mais respostas</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (countScores.A === maxCount) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>profile = 'Poupa-Tudo';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon = '🏦';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description = 'Você prioriza segurança e planejamento. Ótimo para reservas, mas equilibre a cautela com o prazer de desfrutar o presente!';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (countScores.B === maxCount) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>profile = 'Gasta-Tudo';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon = '🛍️';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description = 'Você vive o presente e adora curtir. É fundamental criar um balanço entre a diversão e o estabelecimento de metas de poupança futuras.';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if (countScores.C === maxCount) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>profile = 'Investidor';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon = '📈';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description = 'Você sonha grande e aceita riscos calculados para multiplicar o patrimônio. Ideal para definir metas ambiciosas e crescimento conjunto!';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>profile = 'Ansioso/Evitador';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon = '😰';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description = 'Você evita o tema para não estressar. O primeiro passo é simplificar o controle financeiro para perder o medo e ganhar confiança!';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Atualiza o DOM</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('profileIcon').textContent = icon;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('perfilNome').textContent = profile;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('perfilDescricao').textContent = description;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('scoreA').textContent = countScores.A;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('scoreB').textContent = countScores.B;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('scoreC').textContent = countScores.C;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('scoreD').textContent = countScores.D;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('totalScore').textContent = totalScore;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('averageScore').textContent = averageScore.toFixed(2);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Esconde questionário e mostra resultado</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('quizSection').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('resultado').classList.remove('hidden');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Rola para o topo</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
